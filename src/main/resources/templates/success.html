@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <style>
+            body
+            {
+                background-image: url(images.jpg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+            table
+            {
+                margin-left: 500px;
+                margin-top: 0px;
+            }
+            .he
+            {
+                margin-top: 40px;
+                font-family: serif;
+                font-size: 30;
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+       <div class="he"><center>Registration Successfull</center></div> 
+       <form th:action="@{/success}" >
+        <table class="table table-bordered">
+                <tr class="table-success">
+                    <td>Name:</td>
+                    <td><span th:text="${frm.name}"></span></td>
+                </tr> <br>
+                <tr>
+                    <td>Email:</td>
+                    <td><span th:text="${frm.email}"></span></td><br>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><span th:text="${frm.password}"></span></td><br>
+                </tr>
+                <tr> 
+                    <td>Date of birth:</td>
+                    <td><span th:text="${frm.DOB}"></span></td> <br>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td><span th:text="${frm.g1}"></span></td> <br>
+                </tr>
+                <tr>
+                    <td>Types of paintings:</td>
+                    <td><span th:text="${frm.t1}"></span></td> <br>
+                </tr>
+                <tr>
+                    <td>Feedback:</td>
+                    <td><span th:text="${frm.feedback}"></span></td> <br>
+                </tr>
+                <tr>
+                    <td>Location:</td>
+                    <td><span th:text="${frm.location}"></span></td> <br>
+                </tr>
+        </table> 
+        <button class="btn btn-success">Done</button>
+    </form>
+    </body>
+</html>
